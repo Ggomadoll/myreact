@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "react-router-dom": "^6.4.2"
-  }
+  },
+  "name": "myreactstudy",
+  "version": "1.0.0",
+  "description": "index.js",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "App.js start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ggomadoll/myreact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ggomadoll/myreact/issues"
+  },
+  "homepage": "https://github.com/Ggomadoll/myreact#readme"
 }

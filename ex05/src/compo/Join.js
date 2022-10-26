@@ -12,27 +12,31 @@ function Join() {
     const [nick,setNick] = useState();
     // ref.current -> ref가 적용된 태그를 의미
     // useId.current.focus();
-   document.getElementById("test").focus();
+//    document.getElementById("test").focus();
 
+    const nav = useNavigate();
+    // useNavigate: 주소값을 입력받아 해당하는 주소로 페이지를 전환할 수 있는 기능
 
-    function tryJoin() {
-       nav("/Login?id=" + id+ "&pw=")
-    }
+    // function tryJoin() {
+    //    nav("/Login?id=" + id+ "&pw="+ pw+"&nick=" + nick);
+    // }
+    // form 주소값으로 이동하면서 form 태그안에 있는 내용도 같이 전달
 
 
     return(
         <br>
             <h1>회원가입 페이지입니다</h1>
-    
-            ID: <input onChange={(e)=>setId(e.target.value)} value={id} ref={useId}></input>
+            <form action='/Login'>
+            ID: <input name='id' onChange={(e)=>setId(e.target.value)} value={id} ref={useId}></input>
             <br></br>
-            PW: <input onChange={(e)=>setId(e.target.value)} value={pw}></input>
+            PW: <input name="pw"onChange={(e)=>setId(e.target.value)} value={pw}></input>
             <br></br>
-            NICK: <input onChange={(e)=>setId(e.target.value)} value={nick}></input>
+            NICK: <input name='nick' onChange={(e)=>setId(e.target.value)} value={nick}></input>
             <br></br>
            <button>Join</button>
-           <button onClick={reset}>초기화</button>
+           <button onClick={reset} type="button">초기화</button>
+           </form>
         </br>
     );
 }
-export default Join;    
+export default Join;     

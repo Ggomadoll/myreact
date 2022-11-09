@@ -17,7 +17,7 @@ const Join = () => {
     // 다른 페이지로 이동하지 못하도록 막는 기능
     event.preventDefault()
 
-    
+
     console.log(idRef.current.value)
     console.log(pwRef.current.value)
 
@@ -38,7 +38,7 @@ const Join = () => {
     navigate('/')
     
 })
-
+    
     .catch(()=>{console.log('실패')})
 
 
